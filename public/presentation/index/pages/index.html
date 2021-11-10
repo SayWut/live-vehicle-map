@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/presentation/index/styles/style.css"
+        type="text/css">
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.9.0/css/ol.css"
+        type="text/css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+        crossorigin="anonymous">
+    <script type="module"
+        src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.9.0/build/ol.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.js"
+        integrity="sha512-RT3IJsuoHZ2waemM8ccCUlPNdUuOn8dJCH46N3H2uZoY7swMn1Yn7s56SsE2UBMpjpndeZ91hm87TP1oU6ANjQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <div id="continer" class="container shadow p-0">
+        <div class="row row-cols-2 h-100 g-0">
+            <div id="side"
+                class="row row-cols-1 col overflow-hidden h-100 p-2 g-2 m-0">
+                <div id="vehicles" class="col overflow-auto h-75"></div>
+                <div class="col h-25">
+                    <h5 class="text-primary">Controllers</h5>
+
+                    <div id="controllers" role="group" class="btn-group">
+                        <input type="radio" class="btn-check"
+                            id="controller-pointer" autocomplete="off"
+                            name="controller-button" checked>
+                        <label class="btn btn-outline-primary"
+                            for="controller-pointer">Pointer</label>
+
+                        <input type="radio" class="btn-check"
+                            id="controller-polygon" autocomplete="off"
+                            name="controller-button">
+                        <label class="btn btn-outline-primary"
+                            for="controller-polygon">Polygon</label>
+                    </div>
+                </div>
+            </div>
+            <div id="map" class="col flex-fell"></div>
+        </div>
+    </div>
+
+    <script type="module" src="/presentation/index/js/main.js"></script>
+</body>
+
+</html>

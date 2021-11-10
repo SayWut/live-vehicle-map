@@ -1,0 +1,29 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#continer {
+  position: relative;
+  top: 10%;
+  height: 80%;
+}
+
+#side {
+  z-index: 1;
+  box-shadow: 50px 0px 20px 0px rgba(0, 0, 0, 0.116);
+  background: linear-gradient(180deg, #232323 50%, #323232 100%);
+  width: var(--width-vehicles);
+}
+
+#map {
+  width: var(--width-map);
+}
+
+:root {
+  --width-vehicles: 30%;
+  --width-map: calc(100% - var(--width-vehicles));
+}
